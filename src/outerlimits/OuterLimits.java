@@ -8,6 +8,7 @@ import mindustry.game.EventType.*;
 import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
+import outerlimits.content.*;
 
 public class OuterLimits extends Mod{
 
@@ -17,7 +18,7 @@ public class OuterLimits extends Mod{
 
 	@Override
 	public void loadContent(){
-		Log.info("Loading some example content.");
+		OLItems.load();
 	}
 
 }
