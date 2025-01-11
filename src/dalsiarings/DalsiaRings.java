@@ -1,4 +1,4 @@
-package outerlimits;
+package dalsiarings;
 
 import arc.*;
 import arc.util.*;
@@ -8,17 +8,17 @@ import mindustry.game.EventType.*;
 import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
-import outerlimits.content.*;
+import dalsiarings.content.*;
 
-public class OuterLimits extends Mod{
+public class DalsiaRings extends Mod{
 
-	public OuterLimits(){
+	public DalsiaRings(){
 		Log.info("Loaded ExampleJavaMod constructor.");
 	}
 
 	@Override
 	public void loadContent(){
-		OLItems.load();
+		DRItems.load();
 	}
 
 }

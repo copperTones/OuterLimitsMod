@@ -1,10 +1,10 @@
-displayName: "Outer Limits"
+displayName: "Rings of Dalsia"
 author: "Copper (soweli Kape)"
-description: "Thrive on the far reaches of an asteroid belt."
+description: "Thrive on the rings of the distant planet Dalsia."
 
-name: "outer-limits"
+name: "dalsia-rings"
 version: 0.1
 minGameVersion: 146
 
 java: true
-main: "outerlimits.OuterLimits"
+main: "dalsiarings.DalsiaRings"

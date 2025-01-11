@@ -1,9 +1,9 @@
-package outerlimits.content;
+package dalsiarings.content;
 
 import arc.graphics.Color;
 import mindustry.type.Item;
 
-public class OLItems {
+public class DRItems {
 
 	//Load Mod Items
 
