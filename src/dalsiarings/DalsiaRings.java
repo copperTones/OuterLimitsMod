@@ -19,6 +19,7 @@ public class DalsiaRings extends Mod{
 	@Override
 	public void loadContent(){
 		DRItems.load();
+		DRLiquids.load();
 		DRPlanets.load();
 	}
 
