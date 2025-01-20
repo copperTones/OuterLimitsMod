@@ -6,8 +6,8 @@ import mindustry.type.*;
 public class DRItems{
 
 	public static Item
-	silver, crushedIce, resonantCluster,
-	mineralDust, richMineralDust, redmatterCell;
+	silver, crushedIce, mineralDust, richMineralDust,
+	ice9c, resonantCluster, duriate, redmatterCell;
 
 	public static void load(){
 		silver = new Item("silver", Color.valueOf("8f98a1")){{
@@ -16,10 +16,14 @@ public class DRItems{
 		}};
 
 		crushedIce = new Item("crushed-ice", Color.valueOf("8ca9e8")){{
+			hardness = 1;
 			buildable = false;
 		}};
 
-		resonantCluster = new Item("resonant-cluster", Color.valueOf("ffffff")){{
+		ice9c = new Item("ice-9c", Color.valueOf("d1efff")){{
+		}};
+
+		resonantCluster = new Item("resonant-cluster", Color.valueOf("c3e46a")){{
 			charge = 15f;
 		}};
 
@@ -30,6 +34,10 @@ public class DRItems{
 		richMineralDust = new Item("rich-mineral-dust", Color.valueOf("ffffff")){{
 			buildable = false;
 		}};
+
+		duriate = new Item("duriate", Color.valueOf("d1efff")){{
+		}};
+
 
 		redmatterCell = new Item("redmatter-cell", DRColor.redmatterDark){{
 			explosiveness = 0.2f;
