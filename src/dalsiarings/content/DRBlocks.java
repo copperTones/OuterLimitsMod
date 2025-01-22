@@ -1,23 +1,67 @@
 package dalsiarings.content;
 
+import arc.graphics.Color;
+import mindustry.content.*;
 import mindustry.type.*;
 import mindustry.world.*;
+import mindustry.world.blocks.distribution.*;
+import mindustry.world.blocks.liquid.*;
 import mindustry.world.blocks.power.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.meta.*;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
-import mindustry.content.*;
 
 public class DRBlocks{
 
 	public static Block
+	// liquid
+	fluiduct, fluiductJunction, fluiductBridge, fluiductRouter,
+
 	// factories
 	iceRefreezer,
 	particleCollider, redmatterEncapsulator;
 
 	public static void load(){
+		// liquid
+		fluiduct = new ArmoredConduit("fluiduct"){{
+			requirements(Category.liquid, with(Items.lead, 1, DRItems.ice9c, 1));
+			botColor = Color.valueOf("1f2e2a");
+			leaks = true;
+			liquidCapacity = 15f;
+			liquidPressure = 1.03f;
+			health = 250;
+			researchCostMultiplier = 3;
+			solid = false;
+			underBullets = true;
+		}};
+
+		fluiductRouter = new LiquidRouter("fluiduct-router"){{
+			requirements(Category.liquid, with(Items.lead, 2, DRItems.ice9c, 4));
+			liquidCapacity = 30f;
+			liquidPadding = 3f/4f;
+			solid = false;
+			underBullets = true;
+		}};
+
+		fluiductJunction = new LiquidJunction("fluiduct-junction"){{
+			requirements(Category.liquid, with(Items.lead, 4, DRItems.ice9c, 2));
+			solid = false;
+			underBullets = true;
+		}};
+
+		fluiductBridge = new DirectionLiquidBridge("fluiduct-bridge"){{
+			requirements(Category.liquid, with(Items.lead, 4, DRItems.ice9c, 10));
+			range = 4;
+			solid = false;
+			underBullets = true;
+		}};
+
+		((Conduit)fluiduct).junctionReplacement = fluiductJunction;
+		((Conduit)fluiduct).rotBridgeReplacement = fluiductBridge;
+
+		// factories
 		iceRefreezer = new GenericCrafter("ice-refreezer"){{
 			requirements(Category.crafting, with());
 			size = 2;
